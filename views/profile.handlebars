@@ -1,0 +1,37 @@
+<div id="top-container" class="container-fluid">
+  <h1 id="main-title" class="text-center">Buscamos a melhor vaga para você!</h1>
+  <p id="main-subtitle" class="text-center">Seu portal de vagas da Rede Pública do Distrito federal, direcionado à vagas do Ensino Básico</p>
+  <form id="search-form" class="form-inline" action="/" method="GET">
+    <div class="form-group col-md-10">
+      <input type="text" class="form-control" id="trocavaga" name="trocavaga" placeholder="Digite a vaga que está buscando">
+    </div>
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-primary">Procurar</button>
+    </div>
+  </form>
+</div>
+<main>
+  <div id="trocavagas-container" class="container">
+    <div class="row">
+      <div class="col-md-12">
+        {{#if search}}
+          <h2 id="trocavaga-list-title">Buscando vagas que contem: {{search}}</h2>
+        {{else}}
+          <h2 id="trocavaga-list-title">Veja as nossas vagas em destaque</h2>
+        {{/if}}
+        <ul id="trocavaga-list" class="list-group">
+          {{#each trocavagas}}
+            <li class="list-group-item {{#if dataValues.new_trocavaga }}new-trocavaga{{/if}}">
+              <img src="/img/company.svg" alt="Company">
+              <p><b>Série: </b>{{dataValues.serie_ano}}</p>
+              <h5><b>Origem: </b>{{dataValues.escola_origem}} - {{dataValues.regiao_origem}}</h5>
+              <p><b>Destino: </b>{{dataValues.escola_destino}} - {{dataValues.regiao_destino}}</p>
+              <span class="new-trocavaga-label">Nova</span>
+              <a class="btn btn-primary" href="/trocavagas/view/{{dataValues.id}}">Ver vaga</a>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>

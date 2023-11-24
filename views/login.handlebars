@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <form action="/login" method="POST">
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="username" required placeholder="Digite seu CPF">
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Entrar</button>
+    </form>
+
+    <!-- Mensagem de erro ou sucesso -->
+    <p id="resultado"></p>
+
+    <!-- Botão para redefinir a senha -->
+    <p>
+        <a href="/forgot-password">Esqueceu a senha?</a>
+    </p>
+
+    <!-- Botão para criar um novo usuário -->
+    <p>
+        Não tem uma conta? <a href="/register">Criar conta</a>
+    </p>
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const error = urlParams.get('error');
+            const success = urlParams.get('success');
+
+            if (error) {
+                document.getElementById('resultado').innerText = error;
+                document.getElementById('resultado').style.color = 'red';
+            } else if (success) {
+                document.getElementById('resultado').innerText = success;
+                document.getElementById('resultado').style.color = 'green';
+            }
+        }
+    </script>
+</body>
+</html>

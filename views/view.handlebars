@@ -1,0 +1,29 @@
+<div id="trocavaga-view-container" class="container">
+  <div class="row text-center">
+    <a class="back-link main-color" href="/">Voltar</a>
+    <div id="img-container" class="col-md-12">
+      <img src="/img/company.svg" alt="Company">
+    </div>
+    <div class="col-md-12">
+      <h2 class="main-color">Vaga de Origem:</h2>
+      <p><b>Região:</b> {{Trocavaga.dataValues.regiao_origem}}</p>
+      <p><b>Escola:</b> {{Trocavaga.dataValues.escola_origem}}</p>
+      <p><b>Grau de instrução:</b> {{Trocavaga.dataValues.grau_instrucao}}</p>
+      <p><b>Série/ Ano:</b> {{Trocavaga.dataValues.serie_ano}}</p>
+      <p><b>Turno:</b> {{Trocavaga.dataValues.turno_origem}}</p>
+
+      <h2 class="main-color">Vaga de Destino:</h2>
+      <p><b>Escola:</b> {{Trocavaga.dataValues.escola_destino}}</p>
+      <p><b>Região:</b> {{Trocavaga.dataValues.regiao_destino}}</p>
+      <p><b>Turno:</b> {{Trocavaga.dataValues.turno_destino}}</p>
+
+      <h2 class="main-color">Contato:</h2>
+      <p>
+        Para entrar em contato com <span class="bold main-color">{{Trocavaga.dataValues.responsavel}},</span> 
+        <br>envie um e-mail para <span class="bold main-color">{{Trocavaga.dataValues.email}}</span></br>
+        ou ligue para <span class="bold main-color">{{Trocavaga.dataValues.telefone}}</span>
+        <br></br>
+      </p>
+    </div>
+  </div>
+</div>
