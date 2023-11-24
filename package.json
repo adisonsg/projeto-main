@@ -17,7 +17,7 @@
     "vaga",
     "df"
   ],
-  "author": "\"Adison <adison.asg@gmail.com>, Julio <juliocezar@gmail.com>",
+  "author": "\"Adison <adison.asg@gmail.com>, Julio <juliocezargd@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
